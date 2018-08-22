@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <title>Number Guesser</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,700" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <!--APPLICATION HEADER-->
+    <header>
+      <div class="headline">
+        <h1 id="h1-number">Number</h1>
+        <h1 id="h1-guesser">Guesser</h1>
+      </div>
+    </header>
+
+    <!--LEVEL STATUS-->
+    <div id="level-div">
+      <p>level </p><p id="level">1</p>
+    </div>
+
+    <!--USER INPUT AREA-->
+    <div id="interface">
+      <div class="inner">
+        <fieldset>
+
+          <!--RANGE INPUT AREA-->
+          <div id="range-div">
+            <input type="text" placeholder="Min (optional) default: 1" id="range-min" name="range-min">
+            <input type="text" placeholder="Max (optional) default: 100" id="range-max" name="range-max">
+          </div>
+          <div>
+            <input type="submit" value="Submit Range" id="submit-range" class="button" onclick="getRange();" disabled="disabled">
+          </div>
+
+          <!--GUESS INPUT/CLEAR AREA-->
+          <input type="text" placeholder="Enter your guess" id="guess" name="guess" minlength="1" required="required" />
+          <div id="fieldset-buttons">
+            <input id="submit" type="submit" value="Guess" class="button" onclick="game();" disabled="disabled" />
+            <input id="clear" type="button" value="Clear Guess" class="button" disabled="disable" />
+          </div>
+        </fieldset>
+      </div>
+    </div>
+
+    <!--LAST GUESS AND STATUS TEXT-->
+    <div id="result-window">
+      <p id="status-text">Let's Play</p>
+      <div id="previous-number-guessed">
+        --
+      </div>
+      <p id="result-of-guessed-text">A Guessing Game!</p>
+    </div>
+
+    <!--RESET-->
+    <div id="reset-div">
+      <input type="button" value="Reset" id="reset" class="button" onclick="reloadGame()" disabled="disabled" />
+    </div> 
+
+  </body>
+
+  <script rel="text/script" src="script.js"></script>
+
+</html>
